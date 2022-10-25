@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: masterclick/d5cc80ace1b2:latest
+          tags: masterclick/infra-actions:latest
   
   deploy:
     runs-on: ubuntu-latest
