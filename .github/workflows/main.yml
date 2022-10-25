@@ -11,7 +11,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.9
+        python-version: 3.7
 
     - name: Install dependencies
       run: | 
@@ -61,6 +61,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull masterclick/d5cc80ace1b2
+          sudo docker pull masterclick/infra-actions
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 masterclick/d5cc80ace1b2
+          sudo docker run --rm -d -p 5000:5000 masterclick/infra-actions
